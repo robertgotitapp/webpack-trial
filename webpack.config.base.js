@@ -2,7 +2,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/index.js', // main entry point
   output: {
     path: path.join(__dirname, 'distribution'),
     filename: 'app.bundle.js'
@@ -14,10 +14,11 @@ module.exports = {
         loader: 'babel-loader',
         exclude: /node_modules/,
         options: {
-          presets: ['@babel/preset-env', '@babel/preset-react'],
-          plugins: ['@babel/plugin-proposal-class-properties']
+          presets: ['@babel/preset-env', '@babel/preset-react'], // Presets for babel to read react app
+          plugins: ['@babel/plugin-proposal-class-properties'] // Presets for babel to deal with class javascript
         }
       },
+      // Loaders for babel to process css file
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
@@ -25,7 +26,8 @@ module.exports = {
       }
     ],
   },
+  // Plugins for webpack to produce html file output
   plugins: [new HtmlWebpackPlugin({
-    template: './public/index.html'
+    template: './public/index.html' 
   })]
 }
