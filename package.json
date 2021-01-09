@@ -7,7 +7,9 @@
     "test": "jest",
     "build": "webpack --config webpack.config.prod.js",
     "dev": "webpack serve --open --config webpack.config.dev.js",
-    "dev:hot": "npm run dev -- --hot"
+    "dev:hot": "npm run dev -- --hot",
+    "format": "pretty-quick",
+    "format-all-js": "npx prettier --write '**/*.js'"
   },
   "author": "",
   "license": "ISC",
@@ -24,6 +26,8 @@
     "css-loader": "^5.0.1",
     "html-webpack-plugin": "^4.5.1",
     "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "pretty-quick": "^3.1.0",
     "style-loader": "^2.0.0",
     "webpack": "5.11.1",
     "webpack-bundle-analyzer": "^4.3.0",
