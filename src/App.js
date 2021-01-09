@@ -1,4 +1,5 @@
 import React from 'react'
+import { hot } from 'react-hot-loader'
 
 class App extends React.Component {
   state = {
@@ -24,4 +25,7 @@ class App extends React.Component {
   }
 }
 
-export default App
+// export hot(module)(App) is the same as 2 statements below
+// const hotModuleFunc = hot(module)
+// export default hotModuleFunc(App)
+export default hot(module)(App)

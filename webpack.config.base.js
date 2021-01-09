@@ -15,7 +15,10 @@ module.exports = {
         exclude: /node_modules/,
         options: {
           presets: ['@babel/preset-env', '@babel/preset-react'], // Presets for babel to read react app
-          plugins: ['@babel/plugin-proposal-class-properties'] // Presets for babel to deal with class javascript
+          plugins: [
+            '@babel/plugin-proposal-class-properties', // Plugins for babel to deal with class javascript
+            'react-hot-loader/babel' // Plugins for react to use hot reloader
+          ] 
         }
       },
       // Loaders for babel to process css file
