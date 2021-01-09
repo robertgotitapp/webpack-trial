@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.config.prod.js",
-    "dev": "webpack --watch --config webpack.config.dev.js"
+    "dev": "webpack serve --open --config webpack.config.dev.js"
   },
   "author": "",
   "license": "ISC",
@@ -18,6 +18,7 @@
     "html-webpack-plugin": "^4.5.1",
     "webpack": "5.11.1",
     "webpack-cli": "4.3.1",
+    "webpack-dev-server": "^3.11.1",
     "webpack-merge": "^5.7.3"
   },
   "dependencies": {
