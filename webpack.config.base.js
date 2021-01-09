@@ -14,7 +14,16 @@ module.exports = {
         loader: 'babel-loader',
         exclude: /node_modules/,
         options: {
-          presets: ['@babel/preset-env', '@babel/preset-react'], // Presets for babel to read react app
+          presets: [['@babel/preset-env', {
+            // Use polyfill
+            targets: [ 
+              'last 2 versions',
+              'not dead',
+              'not < 2%',
+              'not ie 11',
+            ],
+            useBuiltIns: 'entry'
+          }], '@babel/preset-react'], // Presets for babel to read react app
           plugins: [
             '@babel/plugin-proposal-class-properties', // Plugins for babel to deal with class javascript
             'react-hot-loader/babel' // Plugins for react to use hot reloader

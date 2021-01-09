@@ -9,5 +9,10 @@ module.exports = merge(baseConfig, {
     analyzerMode: 'static',
     openAnalyzer: false,
     reportFilename: 'bundle_sizes.html'
-  })]
+  })],
+  // Use CDN to treat react and react-dom as external libraries
+  externals: {
+    react: 'React',
+    'react-dom': 'ReactDOM'
+  }
 })
