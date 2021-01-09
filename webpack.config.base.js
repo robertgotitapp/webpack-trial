@@ -13,23 +13,6 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
-        options: {
-          presets: [['@babel/preset-env', {
-            // Use polyfill
-            targets: [ 
-              'last 2 versions',
-              'not dead',
-              'not < 2%',
-              'not ie 11',
-            ],
-            useBuiltIns: 'entry'
-          }], '@babel/preset-react'], // Presets for babel to read react app
-          plugins: [
-            'react-hot-loader/babel', // Plugins for react to use hot reloader
-            '@babel/plugin-proposal-class-properties', // Plugins for babel to deal with class javascript
-            '@babel/plugin-syntax-dynamic-import' // Plugins for lazy loader
-          ] 
-        }
       },
       // Loaders for babel to process css file
       {
