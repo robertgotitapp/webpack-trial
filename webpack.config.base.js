@@ -25,8 +25,9 @@ module.exports = {
             useBuiltIns: 'entry'
           }], '@babel/preset-react'], // Presets for babel to read react app
           plugins: [
+            'react-hot-loader/babel', // Plugins for react to use hot reloader
             '@babel/plugin-proposal-class-properties', // Plugins for babel to deal with class javascript
-            'react-hot-loader/babel' // Plugins for react to use hot reloader
+            '@babel/plugin-syntax-dynamic-import' // Plugins for lazy loader
           ] 
         }
       },
